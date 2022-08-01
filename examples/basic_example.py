@@ -10,4 +10,7 @@ if not os.path.exists("trusted.pem"):
 server = CubeServer("My Team", "$e(r3t!", "https://"+SERVER_HOST)
 r = server.post(Temperature(100.0))
 
-print(r)
+if r:
+    print("Success!!")
+else:
+    print("Failed.")
