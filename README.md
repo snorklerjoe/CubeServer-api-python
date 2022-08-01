@@ -9,5 +9,4 @@ See the [CubeServer repository](https://github.com/snorklerjoe/CubeServer) for m
 ## Usage:
 * See the example for more info
 ## TODOs:
-* Make production-release-ready
 * Add more detailed docstrings, etc
