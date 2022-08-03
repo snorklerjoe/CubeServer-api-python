@@ -29,6 +29,6 @@ setup(name='CubeServer-api-wrapper',
       url=GITHUB_URL,
       packages=find_packages(),
       install_requires=[
-            'requests>=2.28.0,<3.0'
+            'requests[security]>=2.28.0,<3.0'
       ]
      )
