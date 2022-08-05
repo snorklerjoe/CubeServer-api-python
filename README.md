@@ -10,3 +10,5 @@ See the [CubeServer repository](https://github.com/snorklerjoe/CubeServer) for m
 * See the example for more info
 ## TODOs:
 * Add more detailed docstrings, etc
+* Make key verification better- it only works in linux now also...
+* Look at having a simple (json?) config file that the webapp could provide to make things even easier
