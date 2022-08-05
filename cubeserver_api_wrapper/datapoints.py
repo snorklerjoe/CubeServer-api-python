@@ -21,8 +21,8 @@ class DataClass(Enum):
     TEMPERATURE = "temperature"
     HUMIDITY = "humidity"
     PRESSURE = "pressure"
-    LIGHT_INTENSITY = "lux"
-    COMMENT = "txt"
+    LIGHT_INTENSITY = "light intensity"
+    COMMENT = "comment"
 
 class DataPoint(ABC):
     """A class for storing and handling datapoints"""
@@ -42,7 +42,7 @@ class DataPoint(ABC):
         """Dumps a JSON string out that the server will (hopefully) accept"""
         return json.dumps(
             {
-                "type": self.data_class,
+                "type": self.data_class.value,
                 "value": self.value
             }
         )
