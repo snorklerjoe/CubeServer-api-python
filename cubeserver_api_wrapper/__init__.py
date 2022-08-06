@@ -2,7 +2,7 @@
 
 from typing import Union, Iterable
 from requests import Session
-from requests.auth import HTTPDigestAuth
+from requests.auth import HTTPBasicAuth
 from os.path import exists
 
 from .datapoints import __all__ as _datapoints_all
@@ -30,7 +30,7 @@ class CubeServer:
         given, the requests.Session().verify value will be set to this
         value."""
         self.session = Session()
-        self.session.auth = HTTPDigestAuth(team_name, team_secret)
+        self.session.auth = HTTPBasicAuth(team_name, team_secret)
         if isinstance(server_verify, str) and exists(server_verify) or \
             isinstance(server_verify, bool):
             self.session.verify = server_verify
